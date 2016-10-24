@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="vertical"
+             tools:context="hishri.com.gdgdevfest16workshop.DbStorageFragment">
+
+
+<LinearLayout android:orientation="horizontal"
+android:layout_width="match_parent"
+              android:padding="15dp"
+              android:background="#eee"
+android:layout_height="wrap_content">
+	<EditText android:layout_width="0dp"
+	          android:layout_weight="70"
+	          android:layout_height="wrap_content"
+	          android:textSize="18sp"
+	          android:id="@+id/addRec"
+	          android:hint="add text"
+	          android:textColor="#995400"/>
+
+	<Button android:layout_gravity="end" android:text="ADD" android:layout_height="wrap_content" android:layout_width="0dp"
+
+	        android:layout_weight="30" android:id="@+id/addBtn"/>
+	</LinearLayout>
+
+	<android.support.v7.widget.RecyclerView
+			android:id="@+id/db_recycler_view"
+			android:scrollbars="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+</LinearLayout>
