@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.facebook.stetho.okhttp3.StethoInterceptor;
 import okhttp3.*;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -54,14 +55,18 @@ public class SearchResponse extends Fragment {
         }
         mDataset = new ArrayList<>();
 
-        client = new OkHttpClient();
+        client = new OkHttpClient.Builder()
+                .addNetworkInterceptor(new StethoInterceptor())
+                .build();
+        // hook an interceptor
+
         try {
             run();
         } catch (Exception ioe)
         {
             Log.e ( "taha", ioe.getMessage() );
         }
-
+       // client.networkInterceptors().add(new StethoInterceptor());
 
     }
 
