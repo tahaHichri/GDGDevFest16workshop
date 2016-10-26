@@ -3,7 +3,11 @@ This is the app we will work on during the workshop.
 
 GDG DevFest Bizerte 2016 Event.
 
-<i>A software written based on a GPL licensed component the work must be released as open source.</i>
+<i>A software written based on a GPL licensed component. The work based on it must be released as open source.</i>
+
+
+
+
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
